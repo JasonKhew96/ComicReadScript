@@ -3,7 +3,6 @@
 """简易的模板，把 RAW 结尾的文件中的用 @@ 包围起来的模板字符串转为对应内容"""
 
 import pyperclip
-import winsound
 import sys
 import re
 import os
@@ -40,4 +39,3 @@ for root, dirs, files in os.walk(sys.argv[1], topdown=False):
 with open('ComicRead.user.js', 'w', encoding="utf-8") as f:
   f.write(mainStr)
 pyperclip.copy(mainStr)
-winsound.Beep(600, 600)
